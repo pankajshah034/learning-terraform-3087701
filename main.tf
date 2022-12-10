@@ -15,7 +15,7 @@ data "aws_ami" "blog" {
 }
 
 resource "aws_instance" "blog" {
-  ami           = data.aws_ami.app_ami.id
+  ami           = data.aws_ami.blog.id
   instance_type = var.instance_type
 
   tags = {
